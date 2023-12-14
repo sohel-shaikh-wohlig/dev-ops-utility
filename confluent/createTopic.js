@@ -11,6 +11,8 @@ const headers = {
     'Authorization': `Basic ${accessToken}`
   }
 
+const aws_access_key_id = AKIAWOYLUFCGKSHIFFI7
+const aws_secret_access_key = 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
 
 const readData = async () => {
     const stream = fs.createReadStream('./csv_files/tags.csv')
