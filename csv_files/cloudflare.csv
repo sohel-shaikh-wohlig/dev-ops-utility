@@ -1,0 +1,11 @@
+zone_name,type,name,content,ttl
+chingari.io,A,argocd-nft-prod,34.149.254.62,
+chingari.io,A,aptos-indexer,34.149.254.62,
+chingari.io,A,argocd-nft-prod,34.149.254.62,
+chingari.io,A,nft-api,34.149.254.62,
+chingari.io,A,nft-bulk-internal,34.149.254.62,
+chingari.io,A,nft-gari,34.149.254.62,
+chingari.io,A,nft-internal,34.149.254.62,
+chingari.io,A,nft,34.149.254.62,
+chingari.io,A,staking-api,34.149.254.62,
+chingari.io,A,staking-sol-api,34.149.254.62,
