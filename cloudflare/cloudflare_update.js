@@ -3,7 +3,7 @@ const fs = require('fs');
 const axios = require('axios')
  
 const cloudflareAPI = 'https://api.cloudflare.com/client/v4';
-const authToken = 'xxxxxxxx'; // Replace with your API token
+const authToken = 'e3152daa7ab02235fe10237f809e4b1b7fd82'; // Replace with your API token
 const zoneId = 'xxxxx'; // Zone ID of thenewsshield.com
 const emailId = 'sohel.shaikh@wohlig.com'   // Email ID Cloudflare
 const apiKey = 'xxxxx' // Global API Key
