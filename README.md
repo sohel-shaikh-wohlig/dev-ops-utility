@@ -8,7 +8,7 @@ node cloudflare_update.js
 
 - Log in to the Cloudflare dashboard and select your account and domain.
 - ![On the Overview page (the landing page for your domain), find the API section.]
-    (https://developers.cloudflare.com/assets/dash-overview-api-highlighted_hu9300eadd9165939b8fbde60fd27c88b1_508954_2357x3172_resize_q75_box_3-6cb261fd.png)
+    (./assets/cf_overview.png)
 
 - ![The API section contains your Zone ID and Account ID. To copy these values for API commands or other tasks, select Click to copy.]
 (https://developers.cloudflare.com/assets/dash-overview-api-close-view_hu572a7389f8c045b87fe9736ab33a46a9_48667_774x772_resize_q75_box_3-9e82aad9.png)
