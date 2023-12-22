@@ -28,6 +28,70 @@ node cloudflare_update.js
 (https://developers.cloudflare.com/assets/token-summary_hufee83c8baa1101e68636fb7a13e3b7a3_48980_2260x854_resize_q75_box_3-544fe3f0.png)
 - Select Create Token to generate the token’s secret.
 
-### Terraform
+# Confluent KAFKA
 
-Terraform code to created manage resources
+Here are the steps need to follow to import Topic in Confluent Clod
+
+Please install Confluent [https://docs.confluent.io/confluent-cli/current/install.html#default-installation](Cloud CLI) and  [https://jqlang.github.io/jq/download/](jq)
+
+```confluent login --save```
+
+Once you are able to login to confluent, fetch your prod Environment ID and Cluster ID by running the below commands (copy and save the env id and cluster id):
+
+```
+confluent environment list
+
+confluent environment use env-zggwnd
+
+confluent kafka cluster list
+```
+
+You need to change your Environment ID and Cluster ID (line #1 and #2 in the shell file attached) to create a master service account with full access to the cluster. You can give granular access in the future after testing.
+
+Once the line #1 and #2 in the shell file attached is updated, run below commands:
+
+```
+chmod +x createServiceAccountconfluent1.sh
+
+ ./createServiceAccountconfluent1.sh  
+```
+
+[](createServiceAccountconfluent1.sh file)
+
+
+Once you run the script , 2 service accounts and 2 keys will get created, one for Kafka and other one for Schema registry. Please copy and save the complete blue highlighted section from output as shown below:
+
+
+Also, you will see your api keys under your cluster->Api keys section with owner name starting with ***masterSA***
+
+execute the following command to generate Authorization Bearer Token which will be used for POST request to Confluent Cloud 
+```
+echo -n "<api-key>:<api-secret>" | base64
+```
+
+The API Key & API Secret key was generated via createServiceAccountconfluent1.sh shell script
+
+
+After downloading and extracting the folder run npm i to download the required node modules 
+Open createTopic.js file in VS Code Editor and change the following values before running the script
+
+```
+const kafkaClusterID = "lkc-xxxx86";
+const baseURL = `https://pkc-41p56.asia-south1.gcp.confluent.cloud:443/kafka/v3/clusters/${kafkaClusterID}/topics`; 
+```
+
+Navigate to csv_file folder and change the value of tags.csv based on your requirement 
+First Column is the Topic Name
+Second Column is the Number of Partition
+Third Column is the value Retention in milisecond
+
+Save the tags.csv file 
+
+From the root directory of utility execute the following command to execute the script
+
+```
+node createTopic.js
+```
+
+
+This command will import all the tags mentioned in tags.csv to Confluent Cloud
