@@ -1,5 +1,5 @@
-export ENVIRONMENT_ID="env-ygop8k"
-export CLUSTER_ID="lkc-0ddy86"
+export ENVIRONMENT_ID="env-abck"
+export CLUSTER_ID="lkc-abc86"
 export SA_NAME="masterSA_${ENVIRONMENT_ID}_${CLUSTER_ID}"
 
 

@@ -3,7 +3,7 @@ const fs = require('fs');
 const { parse } = require("csv-parse");
 const axios = require('axios')
 
-const kafkaClusterID = "lkc-0ddy86";
+const kafkaClusterID = "lkc-xyz86";
 const baseURL = `https://pkc-41p56.asia-south1.gcp.confluent.cloud:443/kafka/v3/clusters/${kafkaClusterID}/topics`; 
 const accessToken = 'xxxxxxxxxx';
 const headers = {

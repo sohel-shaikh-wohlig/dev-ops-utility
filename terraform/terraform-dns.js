@@ -39,7 +39,7 @@ const readDataDNS = async () => {
                 type         = var.record_type_A
                 ttl          = var.ttl
                 managed_zone = var.managed_zone
-                rrdatas      = var.static_ip_external_gw_global_chng
+                rrdatas      = var.static_ip_external_gw_global
                 project      = var.domain_project
             }
         `;

@@ -2,7 +2,7 @@ const fs = require('fs');
 const { parse } = require("csv-parse");
 const axios = require('axios')
 
-const kafkaClusterID = "lkc-0ddy86";
+const kafkaClusterID = "lkc-xyz86";
 const accessToken = 'xxxx';
 const headers = {
     'Content-Type': 'application/json',
