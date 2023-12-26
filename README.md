@@ -8,10 +8,10 @@ node cloudflare_update.js
 
 - Log in to the Cloudflare dashboard and select your account and domain.
 - ![On the Overview page (the landing page for your domain), find the API section.]
-    (https://developers.cloudflare.com/assets/dash-overview-api-highlighted_hu9300eadd9165939b8fbde60fd27c88b1_508954_2357x3172_resize_q75_box_3-6cb261fd.png)
+    (https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/d91cb838-2521-41f9-9bb4-38b07a9fbf43)
 
-- ![The API section contains your Zone ID and Account ID. To copy these values for API commands or other tasks, select Click to copy.]
-(https://developers.cloudflare.com/assets/dash-overview-api-close-view_hu572a7389f8c045b87fe9736ab33a46a9_48667_774x772_resize_q75_box_3-9e82aad9.png)
+- ![The API section contains your Zone ID and Accoun![cf_overview]
+t ID. To copy these values for API commands or other tasks, select Click to copy.]![cf_api](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/1ab66da8-4af1-4297-8e1b-37c40d0d36bd)
 
 - Email ID will the email logined in with Cloudflare
 
@@ -19,8 +19,8 @@ node cloudflare_update.js
 - From the Cloudflare dashboard, go to My Profile > API Tokens.
 - Select Create Token.
 - Select a template from the available API token templates or create a custom token. We use the Edit zone DNS template in the following examples.
-- ![Add or edit the token name to describe why or how the token is used. Templates are prefilled with a token name and permissions.]
-(https://developers.cloudflare.com/assets/template-customize_hu694c6aca5016eb316b0478a948ba5e1d_122049_2426x1768_resize_q75_box_3-96d5d790.png)
+- ![Add or edit the token name to describe why or how the token is used. Templates are prefilled with a token name and permissions.]![cf_account](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/9af65ad4-8ec3-46fa-8f21-ef0bd97cf2a7)
+
 - Modify the token’s permissions. After selecting a permissions group (Account, User, or Zone), choose what level of access to grant the token. Most groups offer Edit or Read options. Edit is full CRUDL (create, read, update, delete, list) access, while Read is the read permission and list where appropriate. Refer to the available token permissions for more information.
 - Select which resources the token is authorized to access. For example, granting Zone DNS Read access to a zone example.com will allow the token to read DNS records only for that specific zone. Any other zone will return an error for DNS record reads operations. Any other operation on that zone will also return an error.
 - Select Continue to summary.
