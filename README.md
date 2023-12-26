@@ -6,12 +6,11 @@ To run the script
 node cloudflare_update.js
 ```
 
-- Log in to the Cloudflare dashboard and select your account and domain.
-- ![On the Overview page (the landing page for your domain), find the API section.]
-    (https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/d91cb838-2521-41f9-9bb4-38b07a9fbf43)
+- Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select your account and domain.
+- On the Overview page (the landing page for your domain), find the API section.
+    ![Overview](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/d91cb838-2521-41f9-9bb4-38b07a9fbf43)
 
-- ![The API section contains your Zone ID and Accoun![cf_overview]
-t ID. To copy these values for API commands or other tasks, select Click to copy.]![cf_api](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/1ab66da8-4af1-4297-8e1b-37c40d0d36bd)
+- The API section contains your Zone ID and Account ID. To copy these values for API commands or other tasks, select Click to copy.![API](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/1ab66da8-4af1-4297-8e1b-37c40d0d36bd)
 
 - Email ID will the email logined in with Cloudflare
 
@@ -36,7 +35,7 @@ t ID. To copy these values for API commands or other tasks, select Click to copy
 
 Here are the steps need to follow to import Topic in Confluent Clod
 
-Please install Confluent [https://docs.confluent.io/confluent-cli/current/install.html#default-installation](Cloud CLI) and  [https://jqlang.github.io/jq/download/](jq)
+Please install Confluent [Cloud CLI](https://docs.confluent.io/confluent-cli/current/install.html#default-installation) and  [jq](https://jqlang.github.io/jq/download/)
 
 ```confluent login --save```
 
@@ -60,11 +59,11 @@ chmod +x createServiceAccountconfluent1.sh
  ./createServiceAccountconfluent1.sh  
 ```
 
-[](createServiceAccountconfluent1.sh file)
+[createServiceAccountconfluent1.sh](/confluent/createServiceAccountconfluent1.sh)
 
 
 Once you run the script , 2 service accounts and 2 keys will get created, one for Kafka and other one for Schema registry. Please copy and save the complete blue highlighted section from output as shown below:
-
+![Account](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/d6d6b923-409a-4715-b35e-54057613f3e8)
 
 Also, you will see your api keys under your cluster->Api keys section with owner name starting with ***masterSA***
 
@@ -83,6 +82,8 @@ Open createTopic.js file in VS Code Editor and change the following values befor
 const kafkaClusterID = "lkc-xxxx86";
 const baseURL = `https://pkc-41p56.asia-south1.gcp.confluent.cloud:443/kafka/v3/clusters/${kafkaClusterID}/topics`; 
 ```
+![Cluster](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/94bf077b-f11b-441f-879a-70f4dd304a53)
+
 
 Navigate to csv_file folder and change the value of tags.csv based on your requirement 
 First Column is the Topic Name
