@@ -15,11 +15,14 @@ t ID. To copy these values for API commands or other tasks, select Click to copy
 
 - Email ID will the email logined in with Cloudflare
 
-### Create an API token*
-- From the Cloudflare dashboard, go to My Profile > API Tokens.
+### Create an API token
+- From the [Cloudflare dashboard](https://dash.cloudflare.com/login), go to My Profile > API Tokens.
 - Select Create Token.
 - Select a template from the available API token templates or create a custom token. We use the Edit zone DNS template in the following examples.
-- ![Add or edit the token name to describe why or how the token is used. Templates are prefilled with a token name and permissions.]![cf_account](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/9af65ad4-8ec3-46fa-8f21-ef0bd97cf2a7)
+
+- Add or edit the token name to describe why or how the token is used. Templates are prefilled with a token name and permissions.
+![Cloudflare Account](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/9af65ad4-8ec3-46fa-8f21-ef0bd97cf2a7)
+
 
 - Modify the token’s permissions. After selecting a permissions group (Account, User, or Zone), choose what level of access to grant the token. Most groups offer Edit or Read options. Edit is full CRUDL (create, read, update, delete, list) access, while Read is the read permission and list where appropriate. Refer to the available token permissions for more information.
 - Select which resources the token is authorized to access. For example, granting Zone DNS Read access to a zone example.com will allow the token to read DNS records only for that specific zone. Any other zone will return an error for DNS record reads operations. Any other operation on that zone will also return an error.
