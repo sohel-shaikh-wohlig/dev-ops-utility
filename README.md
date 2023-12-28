@@ -1,9 +1,9 @@
 ### Cloudflare
-Update DNS records via Script
+Create or Update DNS records via Nodejs Script
 
 To run the script 
 ```
-node cloudflare_update.js
+node cloudflare/cloudflare.js
 ```
 
 - Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select your account and domain.
@@ -30,6 +30,13 @@ node cloudflare_update.js
 - Select Create Token to generate the token’s secret.
 - Copy the secret to a secure place.![API Token](https://github.com/sohel-shaikh-wohlig/dev-ops-utility/assets/110670609/13e7c75c-2392-4b26-b8b7-9826e392081b)
 
+
+### CSV file format
+zone_name,type,name,content,ttl
+
+|   zone_name   | type  |  name     |  content  |   ttl     |
+|   :---:       | :---: | :---:     | :---:     | :---:     | 
+|   acb.io      |    A  | sso-xyz   | 192.0.0.1 |   1       |
 
 # Confluent KAFKA
 
